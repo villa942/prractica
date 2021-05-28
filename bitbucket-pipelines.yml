@@ -1,4 +1,4 @@
-image: maven:3.3.9
+image: maven:3.6.1
 
 clone:
   depth: full              # SonarCloud scanner needs the full history to assign issues properly
@@ -24,6 +24,7 @@ definitions:
           - mvn -B verify
         artifacts:
           - target/**
+
 pipelines:
   default:
     - step: *build-test
